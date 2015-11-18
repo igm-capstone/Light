@@ -23,12 +23,8 @@ public class PlayerController : MonoBehaviour
         if (moveableObstacle.Length > 0 && moveableObstacle[0].gameObject != null)
             moveObject();
 
-        //Test Inputs
-        // Restart the Level
-        if(Input.GetKey(KeyCode.R))
-        {
-            Application.LoadLevel(Application.loadedLevel);
-        }
+        //Test Inputs        
+        
         // Close Application
         if ((Input.GetKey(KeyCode.F4))&&(Input.GetKey(KeyCode.RightAlt)|| Input.GetKey(KeyCode.LeftAlt)))
         {
@@ -66,5 +62,10 @@ public class PlayerController : MonoBehaviour
             GameStateHUD hud = FindObjectOfType(typeof(GameStateHUD)) as GameStateHUD;
             hud.SetMsg("Player Wins!");
         }
+    }
+
+    public void RestartLevel()
+    {
+        Application.LoadLevel("LvlCreationScene");
     }
 }

@@ -6,6 +6,7 @@ public class GameStateHUD : MonoBehaviour {
 
     Text msg;
     Image img;
+    GameObject restart;
 
 	// Use this for initialization
 	void Start () {
@@ -26,6 +27,7 @@ public class GameStateHUD : MonoBehaviour {
     {
         img.enabled = true;
         msg.enabled = true;
+//        restart.SetActive(true);
         msg.text = text;
     }
 }
