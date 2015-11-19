@@ -26,6 +26,7 @@ public class GuardHUD : MonoBehaviour {
             {
                 var newIcon = Instantiate(icon);
                 newIcon.transform.SetParent(panel);
+                newIcon.transform.localScale = Vector3.one;
             }
         }
     }
